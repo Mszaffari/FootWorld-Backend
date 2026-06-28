@@ -1,0 +1,16 @@
+# FootWorld Backend
+
+Backend API for FootWorld built with FastAPI.
+
+## Tech Stack
+
+- FastAPI
+- PostgreSQL
+- SQLAlchemy
+- Alembic
+- JWT Authentication
+- Docker
+
+## Status
+
+🚧 Under Development
