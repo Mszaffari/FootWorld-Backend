@@ -1,15 +1,15 @@
 from fastapi import FastAPI
+from sqlalchemy import text
 
-app = FastAPI(
-    title="FootWorld API",
-    description="Backend API for FootWorld",
-    version="1.0.0",
-)
+from app.database.database import engine
 
+app = FastAPI()
 
 @app.get("/")
 def root():
+    with engine.connect() as connection:
+        connection.execute(text("SELECT 1"))
+
     return {
-        "status": "success",
-        "message": "FootWorld API is running 🚀",
+        "message": "Database Connected Successfully 🚀"
     }
